@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>UFO Sightings Table</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/calendar.css">
+
+  <a name="top"></a>
+</head>
+
+<body>
+  <h1 class="hero center">UFO Sightings</h1>
+  <div class="header">
+      <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div> 
+    </div>
+
+<nav class ="navbar navbar-inverse center">
+<div class="container fluid">
+
+  <input type="integer" id="date" onkeyup="datesearch()" placeholder="Search by date, ex. 1/5/2010">
+
+<input type ="button" value="Open calendar" onclick="pureJSCalendar.open('M/d/yyyy', 170, 280, 1, '2019-01-01', '2019-1-13', 'date', 50)">
+
+<input type="button" value="Close calendar" onclick="pureJSCalendar.close()">
+
+<input type="text" id="city" onkeyup="citysearch()" placeholder="Search by city, ex. Fresno">
+
+<input type="text" id="state" onkeyup="statesearch()" placeholder="Search by state, ex. CA">
+
+<input type="text" id="country" onkeyup="countrysearch()" placeholder="Search by country, ex. US">
+
+<input type="text" id="shape" onkeyup="shapesearch()" placeholder="Search by shape, ex: circle">
+
+</div>
+</nav>
+
+<div class="container fluid">          
+<div class="row">
+        <div class="col-12 center">
+        
+    <table id="myTable" class="display table table-bordered table-hover table-condensed">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Country</th>
+            <th>Shape</th>
+            <th>Duration</th>
+            <th>Comment</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+      
+  <footer>
+          <div class="my_copyright center">Copyright © 2019 • Victor Yamaykin  • All Rights Reserved</div>
+          <h5 class="center"><a href="#top">Back to Top</a></h5>
+  </footer>      
+      
+</body>
+<script src="https://d3js.org/d3.v5.min.js" type="text/javascript"></script>
+  <script src="js/data.js" type="text/javascript"></script>
+  <script src="js/app.js" type="text/javascript"></script>
+  <script src="js/pureJSCalendar.js" type="text/javascript"></script>
+
+</html>
