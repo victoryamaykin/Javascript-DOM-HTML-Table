@@ -8,7 +8,6 @@ var row = tbody.append("tr");
 data.forEach((UFOReport) => {
   var row = tbody.append("tr");
   Object.entries(UFOReport).forEach(([key, value]) => {
-    console.log(key, value);
     var cell = row.append("td");
     cell.text(value);
   });
@@ -124,4 +123,3 @@ function myFunction() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
-

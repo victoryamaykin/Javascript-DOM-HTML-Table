@@ -2,6 +2,32 @@
   box-sizing: border-box;
   font-family: Ubuntu, sans-serif;
 }
+.switch {
+  align-self: flex-end;
+  margin: 0.9375rem;
+}
+.inner-switch {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #555;
+  border-radius: 1.25rem;
+  width: 3.125rem;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.1875rem;
+  margin-left: 0.3125rem;
+}
+
+.dark,
+.dark * {
+    background-color: #222;
+    color: #e6e6e6;
+    border-color: #e6e6e6;
+}
+
+input {
+  width: 300px;  
+}
 
 /* Style the header: fixed position (always stay at the top) */
 .header {
@@ -138,7 +164,7 @@ select {
   margin-top: 200px;
   font-size: 0.1rem;
   animation: title 1.2s forwards linear;
-  color: antiquewhite;
+  color: rgb(241, 158, 50);
 }
 
 .hero p {
@@ -170,6 +196,13 @@ select {
 }
 
 /* media queries which will only be activated at specific screen sizes */
+@media (max-width: 1200px) {
+  .col-sm-12 {
+    text-align: center; 
+    margin-bottom: 10px;
+  }
+}
+
 @media (max-width: 800px) {
   #table-area td {
     font-size: 1em;
@@ -287,4 +320,3 @@ select {
   /* Add a grey background color to the table header and on hover */
   background-color: #f1f1f1;
 }
-
